@@ -1,0 +1,20 @@
+{
+  "name": "examplesam",
+  "version": "1.0.0",
+  "description": "This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.",
+  "main": "index.js",
+  "scripts": {
+    "create-s3-bucket":"aws s3 mb s3://dummy-alive-company-set-up --region us-east-1 --profile alive-dev-komal",
+    "sam:package" :"sam package --template template.yaml --output-template-file cloudformation.yaml --s3-bucket dummy-alive-company-set-up --region us-east-1 --profile alive-dev-komal",
+    "sam:deploy":"sam deploy --template-file cloudformation.yaml --stack-name dummytest --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND --region us-east-1 --profile alive-dev-komal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komalrathore786/ServerlessCloudFormation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/komalrathore786/ServerlessCloudFormation/issues"
+  },
+  "homepage": "https://github.com/komalrathore786/ServerlessCloudFormation#readme"
+}
